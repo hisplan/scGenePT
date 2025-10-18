@@ -66,9 +66,9 @@ Example for training a model using the GO-C embeddings: ```aws s3 sync --no-sign
 
 We highly recommend creating a virtual environment. Models have been trained using flash-attn. However, flash-attn installation might be finicky, in which case models can be trained without.
 ```
-conda create -y --name scgenept python=3.10 # or python3.10 -m venv scgenept
-source activate scgenept
-pip install -r requirements.txt
+conda create -y --name scgenept python=3.10 pip jupyterlab
+conda activate scgenept
+pip install -r requirements_conda.txt
 pip install flash-attn --no-build-isolation
 pip install scgpt "flash-attn<1.0.5"
 ```
